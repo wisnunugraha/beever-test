@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "a3e738c3-ba24-4da6-b330-29f53c54486e",
+		"name": "API Beever",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14234072"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"asep@gmail.com\",\n    \"password\" :\" 123323\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/auth/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"auth",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"asep@gmail.com\",\n    \"password\" :\" 123323\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/service/v1/auth/create",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"v1",
+								"auth",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"66-fcUCVt4rxuQKPNkUFcXvnH4b4Eo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 16:41:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"messages\": \"Users asep@gmail.com success create new\",\n    \"data\": null,\n    \"key\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Quotes List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/quotes/list",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"quotes",
+						"list"
+					],
+					"query": [
+						{
+							"key": "fillter",
+							"value": "1",
+							"description": "it find a quotes and favorites",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Quotes List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:3000/service/v1/quotes/list",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"v1",
+								"quotes",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-HlMa1cRQ9wqLgEE3aPnSdNi6KMs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 16:34:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"messages\": \"Success get data list quotes\",\n    \"data\": [\n        {\n            \"id\": \"a887b98d-e134-4405-9062-52cd8b4e87d8\",\n            \"quotes\": \"ualla\",\n            \"type\": false\n        }\n    ],\n    \"key\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Quotes Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/quotes/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"quotes",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Quotes Create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quotes\" : \"Tralwal\",\n    \"type\" :true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/service/v1/quotes/create",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"v1",
+								"quotes",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e-QBk0O997JLSaLqQZLok1cyxpLO4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 16:35:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"messages\": \"Quotes Tralwal has been created\",\n    \"data\": null,\n    \"key\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Quotes Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/quotes/update",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"quotes",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Quotes Update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"a887b98d-e134-4405-9062-52cd8b4e87d8\",\n    \"quotes\":\"ualla\",\n    \"type\" : false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/service/v1/quotes/update",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"v1",
+								"quotes",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c-tiHRt141GU2tISsYTRRY+sEtVRs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 16:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"messages\": \"Quotes ualla has been created\",\n    \"data\": null,\n    \"key\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Quotes Deleted",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"048c6e3b-d861-4f4a-bdf4-7c926cf07a08\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/service/v1/quotes/delete",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"service",
+						"v1",
+						"quotes",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Quotes Deleted",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"048c6e3b-d861-4f4a-bdf4-7c926cf07a08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:3000/service/v1/quotes/delete",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"service",
+								"v1",
+								"quotes",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "93"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5d-i7lidFUg7QwXForslIAjdkzZ1Gk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Aug 2022 16:38:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"messages\": \"Quotes Tralal has been deleted\",\n    \"data\": null,\n    \"key\": null\n}"
+				}
+			]
+		}
+	]
+}
